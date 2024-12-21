@@ -80,7 +80,7 @@ def handle_city(m):
     cid = m.chat.id
     if cid in knownUsers :
         city = m.text.strip()
-        api_key = "<WEATHER-API-KEY>" # get api key from openweather
+        api_key = "<API-KEY>" # get api key from openweather
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
         
         response = requests.get(url)
