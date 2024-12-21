@@ -5,7 +5,7 @@ import datetime
 import requests
 import time
 
-TOKEN = '7383929894:AAF75W-jTTDvs5cR-UJrPPKgctxB47F3p9w'
+TOKEN = '<TOKEN-API>'
 bot = telebot.TeleBot(TOKEN)
 
 knownUsers = [] 
@@ -80,7 +80,7 @@ def handle_city(m):
     cid = m.chat.id
     if cid in knownUsers :
         city = m.text.strip()
-        api_key = "58c0ae7c9b3d09574055eb1e9d3c26af"
+        api_key = "<WEATHER-API-KEY>" # get api key from openweather
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
         
         response = requests.get(url)
